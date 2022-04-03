@@ -31,7 +31,30 @@
 
 -python main.py
 
+Few examples of results you can see inside the visualization folder
+
+Roc Curve
+
+![roc curve](https://github.com/McahitKutsal/covid-19-drug-interaction-paper/blob/main/visualizations/roc%20curve.png)
+
+Accurarcy
+
+![roc curve](https://github.com/McahitKutsal/covid-19-drug-interaction-paper/blob/main/visualizations/auc.png)
+
+F1 Score
+
+![roc curve](https://github.com/McahitKutsal/covid-19-drug-interaction-paper/blob/main/visualizations/f1%20score.png)
+
+Drug Predictions
+
+![roc curve](https://github.com/McahitKutsal/covid-19-drug-interaction-paper/blob/main/visualizations/drug%20results.png)
+
 ## The second way is to make the project an isolated docker container and run it in a computer that docker installed.
 **Run following command**
 
 docker-compose up
+
+
+
+
+
