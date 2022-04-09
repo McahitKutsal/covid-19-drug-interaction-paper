@@ -1,3 +1,8 @@
+"""
+    In this study, the followed tensorflow document was utilized.
+    https://keras.io/examples/graph/mpnn-molecular-graphs/
+"""
+
 import numpy as np
 
 class Featurizer:
