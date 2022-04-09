@@ -1,3 +1,9 @@
+"""
+    In this study, the followed tensorflow document was utilized.
+    https://keras.io/examples/graph/mpnn-molecular-graphs/
+"""
+
+
 import tensorflow as tf
 import numpy as np
 from .features import AtomFeaturizer, BondFeaturizer
