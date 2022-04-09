@@ -1,3 +1,9 @@
+
+"""
+    In this study, the followed tensorflow document was utilized.
+    https://keras.io/examples/graph/mpnn-molecular-graphs/
+"""
+
 import tensorflow as tf
 from tensorflow import keras
 from keras import layers
@@ -113,7 +119,7 @@ class TransformerEncoderReadout(layers.Layer):
         )
         self.layernorm_1 = layers.LayerNormalization()
         self.layernorm_2 = layers.LayerNormalization()
-        self.average_pooling = layers.GlobalAveragePooling1D()
+        self.max_pooling = layers.GlobalMaxPool1D()
 
     def call(self, inputs):
         x = self.partition_padding(inputs)
@@ -122,7 +128,7 @@ class TransformerEncoderReadout(layers.Layer):
         attention_output = self.attention(x, x, attention_mask=padding_mask)
         proj_input = self.layernorm_1(x + attention_output)
         proj_output = self.layernorm_2(proj_input + self.dense_proj(proj_input))
-        return self.average_pooling(proj_output)
+        return self.max_pooling(proj_output)
 
 def MPNNModel(atom_dim, bond_dim, batch_size=32, message_units=72, message_steps=6, num_attention_heads=10, dense_units=576):
 
