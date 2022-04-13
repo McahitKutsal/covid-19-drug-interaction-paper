@@ -5,6 +5,7 @@ from custommetrics.metrics import f1
 
 from tensorflow import keras
 import numpy as np
+import tensorflow as tf
 import pandas as pd
 import matplotlib.pyplot as plt
 from rdkit.Chem.Draw import MolsToGridImage
